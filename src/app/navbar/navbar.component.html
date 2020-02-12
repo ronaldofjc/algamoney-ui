@@ -2,13 +2,13 @@
   <div class="container">
     <div class="ui-g">
       <div class="ui-g-12">
-        <a href="#" class="navbar-toggle" (click)="displayMenu = !displayMenu">
+        <a href="#" class="navbar-toggle" (click)="showMenu = !showMenu">
           <span class="pi pi-bars"></span>
         </a>
       </div>
     </div>
   </div>
-  <ul class="navbar-menu" [hidden]="!displayMenu">
+  <ul class="navbar-menu" [hidden]="!showMenu">
     <li class="navbar-user">José da Silva</li>
     <li class="navbar-menu-item"><a href="#">Lançamentos</a></li>
     <li class="navbar-menu-item"><a href="#">Pessoas</a></li>
