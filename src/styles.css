@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #404C51;
+}
+
+label {
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+.dBlock {
+  display: block;
+}
+
+.dateWidth {
+  width: 95px;
+}
+
+.labelAte {
+  margin: 0 .5em;
+}
+
+.titleButton {
+  font-weight: bold;
+}
+
+.col-value {
+  width: 120px;
+}
+
+.col-date {
+  width: 120px;
+  text-align: center;
+}
+
+.col-type {
+  width: 120px;
+  text-align: center;
+}
+
+.col-value-content {
+  text-align: right;
+}
+
+.col-actions {
+  width: 110px;
+  text-align: center;
+}
+
+.icon-spaces {
+  margin: 0 .25em!important;
+}
