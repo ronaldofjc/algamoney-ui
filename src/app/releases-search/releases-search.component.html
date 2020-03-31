@@ -35,12 +35,12 @@
             <tr>
                 <td><span class="ui-column-title">Pessoa</span>{{launch.person}}</td>
                 <td><span class="ui-column-title">Descrição</span>{{launch.description}}</td>
-                <td><span class="ui-column-title">Vencimento</span>{{launch.dueDate}}</td>
-                <td><span class="ui-column-title">Pagamento</span>{{launch.paymentDate}}</td>
+                <td><span class="ui-column-title">Vencimento</span>{{launch.dueDate | date:"dd/MM/y"}}</td>
+                <td><span class="ui-column-title">Pagamento</span>{{launch.paymentDate | date:"dd/MM/y"}}</td>
                 <td class="col-value-content">
                   <span class="ui-column-title">Valor</span>
                   <span [style.color]="launch.type === 'DESPESA' ? 'red' : 'blue'">
-                    {{launch.value}}
+                    R$ {{launch.value | number:'1.2-2'}}
                   </span>
                 </td>
                 <td>

@@ -1,0 +1,55 @@
+<div class="container">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <h1>Novo Lançamento</h1>
+      </div>
+      <div class="ui-g-12">
+        <p-selectButton [options]="types" #type></p-selectButton>
+      </div>
+      <div class="ui-g-6 ui-md-3 ui-fluid">
+        <label>Vencimento</label>
+        <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+      </div>
+      <div class="ui-g-6 ui-md-3 ui-fluid">
+        <label>{{ type.value === 'RECEITA' ? 'Recebimento' : 'Pagamento' }}</label>
+        <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+      </div>
+      <div class="ui-g-12 ui-md-9 ui-fluid">
+        <label>Descrição</label>
+        <input pInputText type="text" name="description" ngModel #description="ngModel" required minlength="5" />
+        <div *ngIf="description.hasError('required') && description.dirty"
+            class="ui-messages ui-messages-error">
+          Informe uma descrição
+        </div>
+        <div *ngIf="description.hasError('minlength') && description.dirty"
+            class="ui-messages ui-messages-error">
+          Descrição deve ter no mínimo
+            {{ description.errors.minlength.requiredLength }} caracteres
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-3 ui-fluid">
+        <label>Valor</label>
+        <input pInputText type="text" currencyMask name="value" ngModel
+        [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }" placeholder="0,00">
+      </div>
+      <div class="ui-g-12 ui-md-6 ui-fluid">
+        <label>Categoria</label>
+        <p-dropdown [options]="categories" placeholder="Selecione"></p-dropdown>
+      </div>
+      <div class="ui-g-12 ui-md-6 ui-fluid">
+        <label>Pessoa</label>
+        <p-dropdown [options]="peoples" [filter]=true placeholder="Selecione"></p-dropdown>
+      </div>
+      <div class="ui-g-12 ui-fluid">
+        <label>Observação</label>
+        <textarea pInputTextarea rows="3"></textarea>
+      </div>
+      <div class="ui-g-12">
+        <button pButton type="button" label="Salvar" class="button-spaces"></button>
+        <button pButton type="button" label="Novo" class="ui-button-success button-spaces"></button>
+        <a href="javascript:;">Voltar para a pesquisa</a>
+      </div>
+    </div>
+  </form>
+</div>

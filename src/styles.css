@@ -60,3 +60,8 @@ label {
 .icon-spaces {
   margin: 0 .25em!important;
 }
+
+.button-spaces {
+  margin-right: .50em!important;
+  font-weight: bold;
+}
