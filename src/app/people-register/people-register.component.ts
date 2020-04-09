@@ -11,5 +11,4 @@ export class PeopleRegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

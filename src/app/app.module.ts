@@ -12,15 +12,19 @@ import { CalendarModule } from 'primeng/calendar';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputMaskModule } from 'primeng/inputmask';
+import { MessageModule } from 'primeng/message';
 
 import { NgxCurrencyModule } from 'ngx-currency';
 
 import { AppComponent } from './app.component';
 import { ReleasesSearchComponent } from './releases-search/releases-search.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MessageComponent } from './message/message.component';
 import { PeoplesSearchComponent } from './peoples-search/peoples-search.component';
 import { LaunchRegisterComponent } from './launch-register/launch-register.component';
 import { PeopleRegisterComponent } from './people-register/people-register.component';
+import { ReleasesGridComponent } from './releases-grid/releases-grid.component';
+import { PeoplesGridComponent } from './peoples-grid/peoples-grid.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { PeopleRegisterComponent } from './people-register/people-register.compo
     NavbarComponent,
     PeoplesSearchComponent,
     LaunchRegisterComponent,
-    PeopleRegisterComponent
+    PeopleRegisterComponent,
+    MessageComponent,
+    ReleasesGridComponent,
+    PeoplesGridComponent,
   ],
   imports: [
     FormsModule,
@@ -45,6 +52,7 @@ import { PeopleRegisterComponent } from './people-register/people-register.compo
     DropdownModule,
     InputMaskModule,
     NgxCurrencyModule,
+    MessageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
